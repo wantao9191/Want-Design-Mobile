@@ -1,0 +1,10 @@
+.doc-container {
+    height: calc(100% - 45px);
+    display: flex;
+    background: #f5f7f9;
+
+    .router-content {
+        flex-grow: 1;
+        background: #fff;
+    }
+}
