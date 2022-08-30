@@ -1,0 +1,18 @@
+.m-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
+    height: 60px;
+
+    .logo {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+
+        img {
+            width: 60px;
+            margin-right: 12px;
+        }
+    }
+}
