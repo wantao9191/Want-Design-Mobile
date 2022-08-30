@@ -1,0 +1,45 @@
+.page-container {
+    background: url(../assets/images/bg.png) center center no-repeat;
+    background-size: cover;
+    height: calc(100% - 45px);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 60px;
+
+    >h1 {
+        img {
+            vertical-align: middle;
+            margin-right: 24px;
+        }
+
+        >.desc {
+            font-size: 18px;
+            margin-top: 24px;
+        }
+    }
+
+    >.btns {
+        .btn-2 {
+            margin-left: 12px;
+        }
+    }
+
+    >.intros {
+        display: flex;
+        justify-content: center;
+
+        .intro-item {
+            margin: 0 40px;
+
+            .title {
+                font-size: 16px;
+                color: #1890ff;
+                margin-bottom: 12px;
+            }
+
+            font-size: 13px;
+        }
+    }
+}

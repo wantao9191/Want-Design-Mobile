@@ -16,8 +16,8 @@ export const MHeader = defineComponent({
                     <h3>Want Design Mobile</h3>
                 </div>
                 <div class={t.menu}>
-                    指南
-                    组件
+                    <want-button fill='none'>指南</want-button>
+                    <want-button fill='none'>组件</want-button>
                 </div>
             </header>
         )
