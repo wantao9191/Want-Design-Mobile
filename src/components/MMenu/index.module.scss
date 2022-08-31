@@ -1,4 +1,29 @@
 .m-menu {
     width: 240px;
     background: #fff;
+    border-right: 1px solid #ddd;
+    font-size: 14px;
+
+    .menu-item-title {
+        color: #999;
+        font-size: 12px;
+        padding: 12px;
+        border-left: 3px solid transparent;
+    }
+
+    .menu-childs {
+        color: #333;
+        padding-bottom: 12px;
+        font-size: 13px;
+
+        .menu-item {
+            cursor: pointer;
+
+            a {
+                display: block;
+                padding: 8px 12px;
+                border-left: 3px solid transparent;
+            }
+        }
+    }
 }

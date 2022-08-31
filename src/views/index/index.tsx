@@ -1,9 +1,14 @@
 import { defineComponent } from 'vue'
 import t from './index.module.scss'
 import logo from '@/assets/images/vite.svg'
+import { useRouter } from 'vue-router'
 export const Index = defineComponent({
     props: {},
     setup(props, context) {
+        const router = useRouter()
+        const click = ()=>{
+            router.push('/doc')
+        }
         return () => (
             <div class={t['page-container']}>
                 <h1>
@@ -13,7 +18,7 @@ export const Index = defineComponent({
                 </h1>
 
                 <div class={t.btns}>
-                    <want-button type='primary' size='large'>开始使用</want-button>
+                    <want-button type='primary' size='large' onClick={click}>开始使用</want-button>
                     <want-button class={t['btn-2']} size='large'>前往GitHub</want-button>
                 </div>
                 <div class={t.intros}>

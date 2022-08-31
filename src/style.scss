@@ -82,3 +82,10 @@ body {
     background: #d2d6dd;
   }
 }
+
+.menu-item .router-link-active {
+  background: #f0faff;
+  color: #1890ff;
+  border-left: 3px solid #1890ff;
+  font-weight: bold;
+}
