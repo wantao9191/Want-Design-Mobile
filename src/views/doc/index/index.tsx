@@ -1,8 +1,8 @@
+type menuArr = { label: string, path?: string, children?: Array<menuArr> }
 import { defineComponent } from 'vue'
 import { RouterView } from 'vue-router'
 import { MMenu } from '../../../components/MMenu'
 import t from './index.module.scss'
-type menuArr = { label: string, path?: string, children?: Array<menuArr> }
 export const Doc = defineComponent({
     components: { MMenu },
     props: {},
@@ -19,7 +19,6 @@ export const Doc = defineComponent({
                     { label: '按钮 Button', path: '/doc/button' },
                 ]
             },
-
         ]
         return () => (
             <div class={t['doc-container']}>

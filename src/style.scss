@@ -89,3 +89,28 @@ body {
   border-left: 3px solid #1890ff;
   font-weight: bold;
 }
+// demo通用样式
+.demo-container {
+  padding: 40px;
+  >header {
+    >p {
+      padding: 30px 0;
+    }
+  }
+  h3{
+    padding-bottom: 20px;
+  }
+  .desc{
+    padding-bottom: 20px;
+  }
+  p {
+    font-size: 14px;
+    color: #666;
+  }
+  .example{
+    margin-top: 12px;
+    display: flex;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+  }
+}
