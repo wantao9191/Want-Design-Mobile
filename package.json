@@ -12,7 +12,7 @@
     "vue": "^3.2.37",
     "vue-router": "^4.0.16",
     "vuex": "^4.0.2",
-    "@wantao/want-ui":"0.0.2"
+    "@wantao/want-ui":"0.0.4"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^3.0.3",

@@ -1,0 +1,41 @@
+.example {
+    margin: 24px 0;
+    display: flex;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    height: 600px;
+    background: #fafbfc;
+    
+    >.code {
+        flex: auto;
+        width: 0;
+        display: flex;
+        flex-direction: column;
+
+        >header {
+            padding: 8px 12px;
+            border-bottom: 1px solid #ddd;
+            text-align: right;
+            >i {
+                cursor: pointer;
+            }
+        }
+
+        .code-pre {
+            flex: auto;
+            overflow-y: auto;
+            background: #fff;
+            padding: 8px 12px;
+            font-size: 13px;
+
+            :not(pre)>code[class*=language-],
+            pre[class*=language-] {
+                background: none;
+            }
+        }
+    }
+
+    .mobile {
+        width: 340px;
+    }
+}
