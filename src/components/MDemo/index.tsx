@@ -13,10 +13,7 @@ export const MDemo = defineComponent({
                             <i class='iconfont want-copy'></i>
                         </a>
                     </header>
-                    <div class={t['code-pre']}>
-                        <pre class="language-css" v-html={props.html}>
-                        </pre>
-                    </div>
+                    <pre class={[t['code-pre'], "language-css"]} v-html={props.html}></pre>
                 </div>
                 <div class={t.mobile}>
                     {slots.mobile?.()}

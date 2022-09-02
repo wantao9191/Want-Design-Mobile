@@ -3,7 +3,7 @@ import Demo1 from './demo1?raw';
 import DemoBlock1 from './demo1';
 import Demo2 from './demo2?raw'
 import DemoBlock2 from './demo2';
-type tableArray = {}
+type tableArray = {attr?:string,desc?:string,type?:string,default?:string}
 export const Button = defineComponent({
     components: { DemoBlock1, DemoBlock2 },
     props: {},

@@ -1,6 +1,7 @@
 .table {
     width: 100%;
     border: 1px solid #ddd;
+    border-bottom: 0;
     border-spacing: 0;
     border-radius: 8px;
     thead {
@@ -21,11 +22,12 @@
     }
     tbody {
         tr {
-            
             td {
                 padding:  12px;
                 border-right: 1px solid #ddd;
                 font-size: 13px;
+                border-bottom: 1px solid #ddd;
+
                 &:last-child {
                     border-right: 0;
                 }
