@@ -16,16 +16,13 @@
             padding: 8px 12px;
             border-bottom: 1px solid #ddd;
             text-align: right;
-            >i {
-                cursor: pointer;
-            }
         }
 
         .code-pre {
             flex: auto;
             overflow-y: auto;
             background: #fff;
-            padding: 8px 12px;
+            padding: 0 12px;
             font-size: 13px;
 
             :not(pre)>code[class*=language-],
@@ -37,5 +34,6 @@
 
     .mobile {
         width: 340px;
+        overflow-y: auto;
     }
 }

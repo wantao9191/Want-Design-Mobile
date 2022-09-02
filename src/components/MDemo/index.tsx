@@ -9,7 +9,9 @@ export const MDemo = defineComponent({
             <main class={t.example}>
                 <div class={t.code}>
                     <header>
-                        <i class='iconfont want-copy'></i>
+                        <a href="javaScript:;" title='Copy Code'>
+                            <i class='iconfont want-copy'></i>
+                        </a>
                     </header>
                     <div class={t['code-pre']}>
                         <pre class="language-css" v-html={props.html}>

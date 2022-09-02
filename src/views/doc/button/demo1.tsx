@@ -22,7 +22,7 @@ export default defineComponent({
                 </demo-block>
                 <demo-block title='语义按钮'>
                     <want-space>
-                        <want-button type='default'>Defult</want-button>
+                        <want-button type='default'>Default</want-button>
                         <want-button type='primary'>Parmary</want-button>
                         <want-button type='success'>Sucess</want-button>
                         <want-button type='warning'>Warning</want-button>
