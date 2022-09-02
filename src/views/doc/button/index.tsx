@@ -6,8 +6,7 @@ import DemoBlock2 from './demo2';
 type tableArray = {attr?:string,desc?:string,type?:string,default?:string}
 export const Button = defineComponent({
     components: { DemoBlock1, DemoBlock2 },
-    props: {},
-    setup(props, context) {
+    setup() {
         const D1 = Prism.highlight(
             Demo1,
             Prism.languages.javascript,
@@ -37,22 +36,8 @@ export const Button = defineComponent({
                 <h3>何时使用</h3>
                 <p class={'desc'}>标记了一个或封装一组操作命令，响应用户点击行为，触发相应的业务逻辑。</p>
                 <h2>示例</h2>
-                <m-demo html={D1} v-slots={{
-                    mobile: () => {
-                        return (
-                            <>
-                                <demo-block1></demo-block1>
-                            </>)
-                    }
-                }}></m-demo>
-                <m-demo html={D2} v-slots={{
-                    mobile: () => {
-                        return (
-                            <>
-                                <demo-block2></demo-block2>
-                            </>)
-                    }
-                }}></m-demo>
+                <m-demo html={D1} params='button-demo1'></m-demo>
+                <m-demo html={D2} params='button-demo2'></m-demo>
                 <h3>属性</h3>
                 <m-table data={tableData}>
                     <table-item label='属性' prop='attr'></table-item>

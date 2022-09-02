@@ -2,9 +2,11 @@ import { defineComponent } from 'vue'
 import t from './index.module.scss'
 export const MDemo = defineComponent({
     props: {
-        html: String
+        html: String,
+        params: String
     },
     setup(props, { slots }) {
+        const src = `${window.location.origin}#/mobileIframe/${props.params}`
         return () => (
             <main class={t.example}>
                 <div class={t.code}>
@@ -15,9 +17,7 @@ export const MDemo = defineComponent({
                     </header>
                     <pre class={[t['code-pre'], "language-css"]} v-html={props.html}></pre>
                 </div>
-                <div class={t.mobile}>
-                    {slots.mobile?.()}
-                </div>
+                <iframe src={src} frameborder="0"></iframe>
             </main>
         )
     }

@@ -20,6 +20,7 @@ import { Checkbox } from "../views/doc/checkbox";
 import { Input } from "../views/doc/input";
 import { Picker } from "../views/doc/picker";
 import { Radio } from "../views/doc/radio";
+import { MobileIframe } from "../views/mobileIframe";
 
 const routes: Array<RouteRecordRaw> = [
     { path: '/', name: 'index', component: Index },
@@ -49,7 +50,8 @@ const routes: Array<RouteRecordRaw> = [
             { path: 'tabs', name: 'tabs', component: Tabs, meta: { title: 'Tabs' } },
             { path: 'toast', name: 'toast', component: Toast, meta: { title: 'Toast' } },
         ]
-    }
+    },
+    { path: '/mobileIframe/:component', name: 'mobileIframe', component: MobileIframe },
 ]
 const router = createRouter({
     routes,

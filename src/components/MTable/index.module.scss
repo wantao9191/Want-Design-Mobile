@@ -4,9 +4,11 @@
     border-bottom: 0;
     border-spacing: 0;
     border-radius: 8px;
+
     thead {
         background: #f5f7fa;
         width: 100%;
+
         th {
             padding: 12px 0;
             font-size: 15px;
@@ -14,16 +16,18 @@
             color: #666;
             border-bottom: 1px solid #ddd;
             border-right: 1px solid #ddd;
+
             &:last-child {
                 border-right: 0;
             }
         }
-       
+
     }
+
     tbody {
         tr {
             td {
-                padding:  12px;
+                padding: 12px;
                 border-right: 1px solid #ddd;
                 font-size: 13px;
                 border-bottom: 1px solid #ddd;
@@ -32,6 +36,13 @@
                     border-right: 0;
                 }
             }
+        }
+    }
+
+    @media screen and (max-width:680px) {
+        & {
+            display: none;
+
         }
     }
 }
