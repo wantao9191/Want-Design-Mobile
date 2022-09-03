@@ -1,8 +1,14 @@
 import { defineComponent } from 'vue'
-import t from './index.module.scss'
+import demo1 from './demo1?raw'
+
 export const ActionSheet = defineComponent({
     props: {},
     setup(props, context) {
+        const D1 = Prism.highlight(
+            demo1,
+            Prism.languages.javascript,
+            "html"
+        )
         return () => (
             <div class='demo-container'>
                 <header>
@@ -12,6 +18,7 @@ export const ActionSheet = defineComponent({
                 <h3>何时使用</h3>
                 <p class={'desc'}>由用户操作触发，提供一组与当前场景操作相关的两个或多个选项，让用户在不离场的情况下完成操作。</p>
                 <h2>示例</h2>
+                <m-demo html={D1} params='actionSheet-demo1'></m-demo>
             </div>
         )
     }

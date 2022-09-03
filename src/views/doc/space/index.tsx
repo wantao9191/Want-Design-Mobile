@@ -24,13 +24,7 @@ export const Space = defineComponent({
                 <h3>何时使用</h3>
                 <p class={'desc'}>适用于多个元素按照水平或垂直方向保持相同的间距。</p>
                 <h2>示例</h2>
-                <m-demo html={D1} v-slots={{
-                    mobile: () => {
-                        return (
-                            <demo-block1></demo-block1>
-                        )
-                    }
-                }}></m-demo>
+                <m-demo html={D1} params='space-demo1'></m-demo>
                 <h3>属性</h3>
                 <m-table data={tableData}>
                     <table-item label='属性' prop='attr'></table-item>

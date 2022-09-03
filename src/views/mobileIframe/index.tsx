@@ -7,7 +7,9 @@ export const MobileIframe = defineComponent({
             'button-demo1': defineAsyncComponent(() => import('../doc/button/demo1')),
             'button-demo2': defineAsyncComponent(() => import('../doc/button/demo2')),
             'tabs-demo1': defineAsyncComponent(() => import('../doc/tabs/demo1')),
-            'tabs-demo2': defineAsyncComponent(() => import('../doc/tabs/demo2'))
+            'tabs-demo2': defineAsyncComponent(() => import('../doc/tabs/demo2')),
+            'space-demo1': defineAsyncComponent(() => import('../doc/space/demo1')),
+            'actionSheet-demo1': defineAsyncComponent(() => import('../doc/actionSheet/demo1'))
         }
         const element = components[route.params.component]
         return () => (
