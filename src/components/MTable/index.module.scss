@@ -4,6 +4,10 @@
     border-bottom: 0;
     border-spacing: 0;
     border-radius: 8px;
+    &:not(:last-child) {
+        margin-bottom: 20px;
+    }
+   
 
     thead {
         background: #f5f7fa;

@@ -3,6 +3,7 @@ import demo1 from './demo1?raw'
 import demoBlock1 from './demo1'
 import demo2 from './demo2?raw'
 import demoBlock2 from './demo2'
+type tableArray = { attr?: string, desc?: string, type?: string, default?: string }
 export const Tabs = defineComponent({
     components: { demoBlock1, demoBlock2 },
     setup() {
@@ -16,6 +17,16 @@ export const Tabs = defineComponent({
             Prism.languages.javascript,
             "html"
         )
+        const tableData: Array<tableArray> = [
+            { attr: 'v-model:value', desc: 'tabs显示页', type: "'string' | 'number'", default: "' '" },
+            { attr: 'beforeClose', desc: '异步操作', type: 'function(done:"关闭事件")=>{}', default: 'null' },
+        ]
+        const tableData1: Array<tableArray> = [
+            { attr: 'name', desc: '选项卡Key，控制选卡显示', type:"'string' | 'number'", default: "' '" },
+            { attr: 'label', desc: '选项卡名称', type:"'string' | 'number'", default: "' '" },
+            { attr: 'disabled', desc: '是否禁用', type: "boolean", default: "false" },
+            { attr: 'slot:label', desc: '选项卡名称插槽', type: "-", default: "-" },
+        ]
         return () => (
             <div class='demo-container'>
                 <header>
@@ -27,6 +38,36 @@ export const Tabs = defineComponent({
                 <h2>示例</h2>
                 <m-demo html={D1} params='tabs-demo1'></m-demo>
                 <m-demo html={D2} params='tabs-demo2'></m-demo>
+                <h3>属性</h3>
+                <m-table data={tableData}>
+                    <table-item label='属性' prop='attr'></table-item>
+                    <table-item label='说明' prop='desc'></table-item>
+                    <table-item label='类型' v-slots={{
+                        row: (scope: any) => {
+                            return <code>{scope.row.type}</code>
+                        }
+                    }}></table-item>
+                    <table-item label='默认值' v-slots={{
+                        row: (scope: any) => {
+                            return <code>{scope.row.default}</code>
+                        }
+                    }}></table-item>
+                </m-table>
+                <h3>Pane</h3>
+                <m-table data={tableData1}>
+                    <table-item label='属性' prop='attr'></table-item>
+                    <table-item label='说明' prop='desc'></table-item>
+                    <table-item label='类型' v-slots={{
+                        row: (scope: any) => {
+                            return <code>{scope.row.type}</code>
+                        }
+                    }}></table-item>
+                    <table-item label='默认值' v-slots={{
+                        row: (scope: any) => {
+                            return <code>{scope.row.default}</code>
+                        }
+                    }}></table-item>
+                </m-table>
             </div>
         )
     }
