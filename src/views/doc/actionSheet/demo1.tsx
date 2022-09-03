@@ -5,6 +5,7 @@ export default defineComponent({
         const visible1 = ref(false)
         const visible2 = ref(false)
         const visible3 = ref(false)
+        const visible4 = ref(false)
         const click1 = () => {
             visible1.value = true
         }
@@ -15,6 +16,9 @@ export default defineComponent({
             visible3.value = true
         }
         const click4 = () => {
+            visible4.value = true
+        }
+        const click5 = () => {
             actionSheet({
                 title:'指令式调用',
                 actions: [
@@ -51,9 +55,9 @@ export default defineComponent({
                     ></want-sheet-action>
                 </demo-block>
                 <demo-block title='选项状态'>
-                    <want-button block onClick={click2}>禁用选项和危险选项</want-button>
+                    <want-button block onClick={click3}>禁用选项和危险选项</want-button>
                     <want-sheet-action
-                        v-model:visible={visible2.value}
+                        v-model:visible={visible3.value}
                         title='禁用选项和危险选项'
                         actions={
                             [{ label: '选项一' },
@@ -64,9 +68,9 @@ export default defineComponent({
                     ></want-sheet-action>
                 </demo-block>
                 <demo-block title='事件处理'>
-                    <want-button block onClick={click3}>事件处理</want-button>
+                    <want-button block onClick={click4}>事件处理</want-button>
                     <want-sheet-action
-                        v-model:visible={visible3.value}
+                        v-model:visible={visible4.value}
                         title='禁用选项和危险选项'
                         actions={
                             [{ label: '选项一' },
@@ -78,7 +82,7 @@ export default defineComponent({
                     ></want-sheet-action>
                 </demo-block>
                 <demo-block title='指令式调用'>
-                    <want-button block onClick={click4}>指令式调用</want-button>
+                    <want-button block onClick={click5}>指令式调用</want-button>
                 </demo-block>
             </>
         )

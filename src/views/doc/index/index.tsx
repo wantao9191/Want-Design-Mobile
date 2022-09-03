@@ -1,12 +1,13 @@
 type menuArr = { label: string, path?: string, children?: Array<menuArr> }
 import { defineComponent } from 'vue'
-import { RouterView } from 'vue-router'
+import { onBeforeRouteUpdate, RouterView, useRoute } from 'vue-router'
 import { MMenu } from '../../../components/MMenu'
 import t from './index.module.scss'
 export const Doc = defineComponent({
     components: { MMenu },
     props: {},
     setup(props, context) {
+        const route = useRoute()
         const menu: Array<menuArr> = [
             {
                 label: 'Install', children: [
@@ -56,10 +57,15 @@ export const Doc = defineComponent({
                 ]
             }
         ]
+        onBeforeRouteUpdate((to) => {
+            document.title = to.meta ? to.meta.title + " | Want-Design" : "Want-Design";
+            document.querySelector(".router-content").scrollTop = 0;
+        })
+        document.title = route.meta ?.title + " | Want-Design" ?? "Want-Design";
         return () => (
             <div class={t['doc-container']}>
                 <m-menu menus={menu}></m-menu>
-                <div class={t['router-content']}>
+                <div class={[t['router-content'],'router-content']}>
                     <RouterView />
                 </div>
             </div>

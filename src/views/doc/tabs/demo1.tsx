@@ -39,7 +39,7 @@ export default defineComponent({
                     <want-tabs-pane label='选项一' name='1'>内容一</want-tabs-pane>
                     <want-tabs-pane label='选项二' name='2' disabled>内容二</want-tabs-pane>
                     <want-tabs-pane label='选项三' name='3'
-                        v-slots={{ default: () => 'slot-选项三' }}
+                        v-slots={{ label: () => 'slot-选项三' }}
                     >内容三</want-tabs-pane>
                 </want-tabs>
             </demo-block>
