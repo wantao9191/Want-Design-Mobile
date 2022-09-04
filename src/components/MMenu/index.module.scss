@@ -1,28 +1,42 @@
 .m-menu {
     width: 240px;
-    background: #fff;
-    border-right: 1px solid #ddd;
     font-size: 14px;
-    overflow-y: auto;
-    .menu-item-title {
-        color: #999;
-        font-size: 12px;
-        padding: 12px;
-        border-left: 3px solid transparent;
+
+    .wrap {
+        position: fixed;
+        background: #fff;
+        top: 50px;
+        bottom: 0;
+        width: 240px;
+        border-right: 1px solid #ddd;
+        overflow-y: auto;
+
+        .menu-item-title {
+            color: #999;
+            font-size: 12px;
+            padding: 12px;
+            border-left: 3px solid transparent;
+        }
+
+        .menu-childs {
+            color: #333;
+            font-size: 13px;
+
+            .menu-item {
+                cursor: pointer;
+
+                a {
+                    display: block;
+                    padding: 8px 12px;
+                    border-left: 3px solid transparent;
+                }
+            }
+        }
     }
 
-    .menu-childs {
-        color: #333;
-        font-size: 13px;
-
-        .menu-item {
-            cursor: pointer;
-
-            a {
-                display: block;
-                padding: 8px 12px;
-                border-left: 3px solid transparent;
-            }
+    @media screen and (max-width:680px) {
+        & {
+            display: none;
         }
     }
 }

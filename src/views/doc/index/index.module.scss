@@ -1,12 +1,17 @@
 .doc-container {
     height: calc(100% - 45px);
     display: flex;
-    background: #f5f7f9;
-    
+    overflow-y: auto;
+    background: #fff;
+
     .router-content {
         flex-grow: 1;
-        background: #fff;
         padding: 12px;
-        overflow-y: auto;
+    }
+
+    @media screen and (max-width:680px) {
+        .router-content {
+            padding: 0;
+        }
     }
 }

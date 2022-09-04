@@ -31,7 +31,11 @@
             }
         }
     }
-
+    @media screen and (max-width:680px) {
+        .code{
+            display: none;
+        }
+    }
     .mobile {
         width: 340px;
         overflow-y: auto;

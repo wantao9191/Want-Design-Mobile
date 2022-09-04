@@ -1,0 +1,15 @@
+.m-fiex-menu {
+    width: 180px;
+
+    .wrap {
+        position: fixed;
+        right: 160px;
+        top: 100px;
+    }
+
+    @media screen and (max-width:1366px) {
+        & {
+            display: none;
+        }
+    }
+}

@@ -1,12 +1,14 @@
 type menuArr = { label: string, path?: string, children?: Array<menuArr> }
-import { defineComponent } from 'vue'
+import { defineComponent, nextTick } from 'vue'
 import { onBeforeRouteUpdate, RouterView, useRoute } from 'vue-router'
+import { MFixedMenu } from '../../../components/MFixedMenu'
 import { MMenu } from '../../../components/MMenu'
 import t from './index.module.scss'
 export const Doc = defineComponent({
-    components: { MMenu },
+    components: { MMenu, MFixedMenu },
     props: {},
     setup(props, context) {
+        let reload = true
         const route = useRoute()
         const menu: Array<menuArr> = [
             {
@@ -18,6 +20,15 @@ export const Doc = defineComponent({
                 label: 'Basic', children: [
                     { label: '图标 Icon', path: '/doc/icon' },
                     { label: '按钮 Button', path: '/doc/button' },
+                ]
+            },
+            {
+                label: 'Form', children: [
+                    { label: 'Checkbox 复选框', path: '/doc/checkbox' },
+                    { label: 'Input 输入框', path: '/doc/input' },
+                    { label: 'Picker 选择器', path: '/doc/picker' },
+                    { label: 'Switch 开关', path: '/doc/switch' },
+                    { label: 'Radio 单选框', path: '/doc/radio' },
                 ]
             },
             {
@@ -41,15 +52,7 @@ export const Doc = defineComponent({
                     { label: '通告栏 NoticeBar', path: '/doc/noticeBar' }
                 ]
             },
-            {
-                label: 'Form', children: [
-                    { label: 'Checkbox 复选框', path: '/doc/checkbox' },
-                    { label: 'Input 输入框', path: '/doc/input' },
-                    { label: 'Picker 选择器', path: '/doc/picker' },
-                    { label: 'Switch 开关', path: '/doc/switch' },
-                    { label: 'Radio 单选框', path: '/doc/radio' },
-                ]
-            },
+
             {
                 label: 'Data', children: [
                     { label: 'Collapse 折叠面板', path: '/doc/collapse' },
@@ -59,15 +62,19 @@ export const Doc = defineComponent({
         ]
         onBeforeRouteUpdate((to) => {
             document.title = to.meta ? to.meta.title + " | Want-Design" : "Want-Design";
-            document.querySelector(".router-content").scrollTop = 0;
+            reload = false
+            nextTick(() => {
+                reload = true
+            })
         })
-        document.title = route.meta ?.title + " | Want-Design" ?? "Want-Design";
+        document.title = route.meta?.title + " | Want-Design" ?? "Want-Design";
         return () => (
             <div class={t['doc-container']}>
-                <m-menu menus={menu}></m-menu>
-                <div class={[t['router-content'],'router-content']}>
+                <m-menu menus={menu} class='doc-menu'></m-menu>
+                <div class={[t['router-content'], 'router-content']}>
                     <RouterView />
                 </div>
+                {reload ? <m-fixed-menu></m-fixed-menu> : ''}
             </div>
         )
     }

@@ -8,7 +8,6 @@ import { installTable } from './components/MTable/install'
 import "prismjs/themes/prism.min.css";
 import "prismjs";
 const app = createApp(App)
-console.log(app)
 const Prism = (window as any).Prism;
 app.use(router).use(WantUi).use(installDemo).use(installTable)
 app.mount('#app')
