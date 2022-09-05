@@ -11,7 +11,7 @@ export const Popup = defineComponent({
                 </header>
                 <h3>何时使用</h3>
                 <p class={'desc'}>适用于展示弹窗、信息提示、选择输入、切换等内容，支持多个弹出层叠加展示。</p>
-                <h2>示例</h2>
+                <h3>示例</h3>
             </div>
         )
     }

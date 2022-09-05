@@ -11,7 +11,7 @@ export const SwipeAction = defineComponent({
                 </header>
                 <h3>何时使用</h3>
                 <p class={'desc'}>通过滑动操作来展示隐藏的功能菜单。</p>
-                <h2>示例</h2>
+                <h3>示例</h3>
             </div>
         )
     }

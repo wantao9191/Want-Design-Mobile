@@ -10,7 +10,7 @@ export const NoticeBar = defineComponent({
                 </header>
                 <h3>何时使用</h3>
                 <p class={'desc'}>适用于当前页面内信息的通知，是一种较醒目的页面内通知方式。</p>
-                <h2>示例</h2>
+                <h3>示例</h3>
             </div>
         )
     }

@@ -55,6 +55,13 @@ const routes: Array<RouteRecordRaw> = [
 ]
 const router = createRouter({
     routes,
-    history: createWebHashHistory()
+    history: createWebHashHistory(),
+    scrollBehavior() {
+        setTimeout(() => {
+            document.getElementById('doc-container')?.scrollTo(0,0)
+        }, 100);
+ 
+    }
+
 })
 export default router

@@ -11,7 +11,7 @@ export const Collapse = defineComponent({
                 </header>
                 <h3>何时使用</h3>
                 <p class={'desc'}>对复杂区域进行分组和隐藏，保持页面的整洁。</p>
-                <h2>示例</h2>
+                <h3>示例</h3>
             </div>
         )
     }

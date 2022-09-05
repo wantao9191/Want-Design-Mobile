@@ -11,7 +11,7 @@ export const Swiper = defineComponent({
                 </header>
                 <h3>何时使用</h3>
                 <p class={'desc'}>当有一组平级的内容。当内容空间不足时，可以用走马灯的形式进行收纳，进行轮播展现。常用于一组图片或卡片轮播。</p>
-                <h2>示例</h2>
+                <h3>示例</h3>
             </div>
         )
     }

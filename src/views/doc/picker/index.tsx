@@ -11,7 +11,7 @@ export const Picker = defineComponent({
                 </header>
                 <h3>何时使用</h3>
                 <p class={'desc'}>提供一组或多组关联选项供用户选择。</p>
-                <h2>示例</h2>
+                <h3>示例</h3>
             </div>
         )
     }

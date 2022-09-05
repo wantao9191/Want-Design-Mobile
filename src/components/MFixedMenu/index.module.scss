@@ -1,11 +1,34 @@
-.m-fiex-menu {
-    width: 180px;
-
+.m-fixed-menu {
+    // width: 180px;
+    position: relative;
     .wrap {
         position: fixed;
-        right: 160px;
+        right: 130px;
         top: 100px;
+        .wrap-content {
+            position: relative;
+    
+            li {
+                font-size: 14px;
+                color: #666;
+                padding: 3px 0;
+                cursor: pointer;
+            }
+    
+            .aside-left {
+                position: absolute;
+                left: -8px;
+                top: 0;
+                transform: translateY(6px);
+                height: 14px;
+                width: 3px;
+                background: #1890ff;
+                transition: .4s all;
+            }
+        }
+        
     }
+    
 
     @media screen and (max-width:1366px) {
         & {

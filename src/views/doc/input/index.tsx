@@ -11,7 +11,7 @@ export const Input = defineComponent({
                 </header>
                 <h3>何时使用</h3>
                 <p class={'desc'}>一般用在表单页进行信息的收集，提供文本框、选择框两种类型。</p>
-                <h2>示例</h2>
+                <h3>示例</h3>
             </div>
         )
     }

@@ -35,7 +35,7 @@ export const Tabs = defineComponent({
                 </header>
                 <h3>何时使用</h3>
                 <p class={'desc'}>当前内容需要分成同层级结构的组，进行内容切换展示，常用在表单或者列表的顶部。</p>
-                <h2>示例</h2>
+                <h3>示例</h3>
                 <m-demo html={D1} params='tabs-demo1'></m-demo>
                 <m-demo html={D2} params='tabs-demo2'></m-demo>
                 <h3>属性</h3>

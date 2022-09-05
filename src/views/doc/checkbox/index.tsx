@@ -11,7 +11,7 @@ export const Checkbox = defineComponent({
                 </header>
                 <h3>何时使用</h3>
                 <p class={'desc'}>在一组可选项中进行多项选择时。</p>
-                <h2>示例</h2>
+                <h3>示例</h3>
             </div>
         )
     }

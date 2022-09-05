@@ -11,7 +11,7 @@ export const Toast = defineComponent({
                 </header>
                 <h3>何时使用</h3>
                 <p class={'desc'}>适用于页面内容的变化不能直接反应操作结果时使用。</p>
-                <h2>示例</h2>
+                <h3>示例</h3>
             </div>
         )
     }

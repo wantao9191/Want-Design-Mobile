@@ -11,7 +11,7 @@ export const Radio = defineComponent({
                 </header>
                 <h3>何时使用</h3>
                 <p class={'desc'}>单选框所有选项默认可见，方便用户在比较中选择，因此选项不宜过多。</p>
-                <h2>示例</h2>
+                <h3>示例</h3>
             </div>
         )
     }

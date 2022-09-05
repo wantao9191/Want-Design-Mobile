@@ -1,5 +1,5 @@
 type menuArr = { label: string, path?: string, children?: Array<menuArr> }
-import { defineComponent, nextTick } from 'vue'
+import { defineComponent, nextTick, ref } from 'vue'
 import { onBeforeRouteUpdate, RouterView, useRoute } from 'vue-router'
 import { MFixedMenu } from '../../../components/MFixedMenu'
 import { MMenu } from '../../../components/MMenu'
@@ -8,7 +8,7 @@ export const Doc = defineComponent({
     components: { MMenu, MFixedMenu },
     props: {},
     setup(props, context) {
-        let reload = true
+        const reload = ref(true)
         const route = useRoute()
         const menu: Array<menuArr> = [
             {
@@ -62,19 +62,19 @@ export const Doc = defineComponent({
         ]
         onBeforeRouteUpdate((to) => {
             document.title = to.meta ? to.meta.title + " | Want-Design" : "Want-Design";
-            reload = false
-            nextTick(() => {
-                reload = true
-            })
+            reload.value = false
+            setTimeout(()=>{
+                reload.value = true
+            },100)
         })
         document.title = route.meta?.title + " | Want-Design" ?? "Want-Design";
         return () => (
-            <div class={t['doc-container']}>
+            <div class={t['doc-container']} id='doc-container'>
                 <m-menu menus={menu} class='doc-menu'></m-menu>
                 <div class={[t['router-content'], 'router-content']}>
                     <RouterView />
                 </div>
-                {reload ? <m-fixed-menu></m-fixed-menu> : ''}
+                {reload.value ? <m-fixed-menu></m-fixed-menu> : ''}
             </div>
         )
     }

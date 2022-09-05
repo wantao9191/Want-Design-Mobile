@@ -8,7 +8,6 @@ export default defineComponent({
         const activeName2 = ref('1')
         const activeName3 = ref('1')
         const beforeTabChange = (done: any) => {
-            console.log(dialog)
             dialog.confirm({ content: '是否确认切换标签？' }).then(() => {
                 done()
                 Toast({text:'切换了标签',duration:1000}).show()

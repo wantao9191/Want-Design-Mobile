@@ -7,11 +7,17 @@
     .router-content {
         flex-grow: 1;
         padding: 12px;
+        margin-right: 180px;
     }
 
     @media screen and (max-width:680px) {
         .router-content {
             padding: 0;
+        }
+    }
+    @media screen and (max-width:1366px){
+        .router-content {
+            margin-right: 0;
         }
     }
 }

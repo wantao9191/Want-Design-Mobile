@@ -11,7 +11,7 @@ export const Switch = defineComponent({
                 </header>
                 <h3>何时使用</h3>
                 <p class={'desc'}>需要表示开关状态/两种状态之间的切换时。</p>
-                <h2>示例</h2>
+                <h3>示例</h3>
             </div>
         )
     }
