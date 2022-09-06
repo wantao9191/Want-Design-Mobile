@@ -11,7 +11,8 @@ export const MobileIframe = defineComponent({
             'space-demo1': defineAsyncComponent(() => import('../doc/space/demo1')),
             'actionSheet-demo1': defineAsyncComponent(() => import('../doc/actionSheet/demo1')),
             'checkbox-demo1':defineAsyncComponent(()=>import('../doc/checkbox/demo1')),
-            'input-demo1':defineAsyncComponent(()=>import('../doc/input/demo1'))
+            'input-demo1':defineAsyncComponent(()=>import('../doc/input/demo1')),
+            'picker-demo1':defineAsyncComponent(()=>import('../doc/picker/demo1'))
         }
         const element = components[route.params.component]
         return () => (

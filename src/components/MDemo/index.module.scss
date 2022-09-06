@@ -31,11 +31,6 @@
             }
         }
     }
-    @media screen and (max-width:680px) {
-        .code{
-            display: none;
-        }
-    }
     .mobile {
         width: 340px;
         overflow-y: auto;
@@ -44,4 +39,13 @@
         width: 340px;
         height: 100%;
     }
+    @media screen and (max-width:680px) {
+        .code{
+            display: none;
+        }
+        iframe{
+            width: 100%;
+        }
+    }
+    
 }

@@ -35,7 +35,7 @@ const routes: Array<RouteRecordRaw> = [
             { path: 'collapse', name: 'collapse', component: Collapse, meta: { title: 'Collapse' } },
             { path: 'checkbox', name: 'checkbox', component: Checkbox, meta: { title: 'Checkbox' } },
             { path: 'dialog', name: 'dialog', component: Dialog, meta: { title: 'Dialog' } },
-            { path: 'installation', name: 'installation', component: Installation, meta: { title: 'Installation' } },
+            { path: 'installation', name: 'installation', component: Installation, meta: { title: 'Quick Start' } },
             { path: 'icon', name: 'icon', component: Icon, meta: { title: 'Icon' } },
             { path: 'input', name: 'input', component: Input, meta: { title: 'Input' } },
             { path: 'modal', name: 'modal', component: Modal, meta: { title: 'Modal' } },

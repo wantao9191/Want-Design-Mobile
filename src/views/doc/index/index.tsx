@@ -8,8 +8,9 @@ export const Doc = defineComponent({
     components: { MMenu, MFixedMenu },
     props: {},
     setup(props, context) {
-        const reload = ref(true)
         const route = useRoute()
+        const reload = ref(true)
+        const noMargin = ref(route.path === '/doc/installation')
         const menu: Array<menuArr> = [
             {
                 label: 'Install', children: [
@@ -63,18 +64,19 @@ export const Doc = defineComponent({
         onBeforeRouteUpdate((to) => {
             document.title = to.meta ? to.meta.title + " | Want-Design" : "Want-Design";
             reload.value = false
+            noMargin.value = to.path === '/doc/installation'
             setTimeout(()=>{
-                reload.value = true
+                reload.value = !noMargin.value
             },100)
         })
         document.title = route.meta?.title + " | Want-Design" ?? "Want-Design";
         return () => (
             <div class={t['doc-container']} id='doc-container'>
                 <m-menu menus={menu} class='doc-menu'></m-menu>
-                <div class={[t['router-content'], 'router-content']}>
+                <div class={[t['router-content'], 'router-content',noMargin.value?t['no-margin']:'']}>
                     <RouterView />
                 </div>
-                {reload.value ? <m-fixed-menu></m-fixed-menu> : ''}
+                {!noMargin.value&&reload.value ? <m-fixed-menu></m-fixed-menu> : ''}
             </div>
         )
     }
