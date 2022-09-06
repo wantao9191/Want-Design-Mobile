@@ -9,10 +9,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@wantao/want-ui": "^0.0.52",
     "vue": "^3.2.37",
     "vue-router": "^4.0.16",
-    "vuex": "^4.0.2",
-    "@wantao/want-ui":"0.0.51"
+    "vuex": "^4.0.2"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^3.0.3",

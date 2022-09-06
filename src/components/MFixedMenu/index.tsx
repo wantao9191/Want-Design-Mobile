@@ -41,7 +41,7 @@ export const MFixedMenu = defineComponent({
                 <div class={t.wrap}>
                     <div class={t['wrap-content']}>
                         <ul>
-                            {arrs.map((m: string, i: number) => <li class='fixed-menu-item' onClick={() => { click(i) }}>{m}</li>)}
+                            {arrs.map((m: string, i: number) => <li class={[i === index.value ? t.active:'','fixed-menu-item']} onClick={() => { click(i) }}>{m}</li>)}
                         </ul>
                         <div class={t['aside-left']} style={{ top: `${top.value}px` }}></div>
                     </div>

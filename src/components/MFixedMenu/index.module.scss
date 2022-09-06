@@ -13,6 +13,9 @@
                 color: #666;
                 padding: 3px 0;
                 cursor: pointer;
+                &.active {
+                    color: #1890ff;
+                }
             }
     
             .aside-left {

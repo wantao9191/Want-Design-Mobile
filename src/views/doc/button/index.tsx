@@ -1,11 +1,8 @@
 import { defineComponent } from 'vue'
 import Demo1 from './demo1?raw';
-import DemoBlock1 from './demo1';
 import Demo2 from './demo2?raw'
-import DemoBlock2 from './demo2';
 type tableArray = { attr?: string, desc?: string, type?: string, default?: string }
 export const Button = defineComponent({
-    components: { DemoBlock1, DemoBlock2 },
     setup() {
         const D1 = Prism.highlight(
             Demo1,
