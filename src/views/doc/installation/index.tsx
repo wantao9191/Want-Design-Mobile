@@ -32,12 +32,12 @@ app.use(button)`,
                     <p></p>
                 </header>
                 <h3>安装</h3>
-                <pre v-html={D1} class="language-css"></pre>
+                <pre v-html={D1} class="language-css" style={{'font-size':'13px'}}></pre>
                 <p class={'desc'}>目前npm安装会出现 <code>"workspace:": workspace:*</code> 错误，所以只能使用cnpm安装</p>
                 <h3>引用</h3>
-                <pre v-html={D2} class="language-css"></pre>
+                <pre v-html={D2} class="language-css" style={{'font-size':'13px'}}></pre>
                 <h3 style={{ 'margin-top': '24px' }}>按需加载</h3>
-                <pre v-html={D3} class="language-css"></pre>
+                <pre v-html={D3} class="language-css" style={{'font-size':'13px'}}></pre>
                 <p class={'desc'}>直接引入组件即可，want-ui 会自动为你加载 css 样式文件：</p>
             </div>
         )
