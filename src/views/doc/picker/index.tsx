@@ -10,16 +10,10 @@ export const Picker = defineComponent({
             "html"
         )
         const tableData: Array<tableArray> = [
-            { attr: 'v-model:value', desc: '输入框值', type: 'string', default: '""' },
-            { attr: 'clearable', desc: '是否一键清空', type: "boolean", default: "false" },
-            { attr: 'disabled', desc: '是否禁用', type: 'boolean', default: 'false' },
-            { attr: 'readonly', desc: '是否只读', type: "boolean", default: 'false' },
-            { attr: 'maxlength', desc: '最大输入文字数', type: 'number', default: 'null' },
-            { attr: 'align', desc: '文字输入方向', type: "'left' | 'center' | 'right'", default: "'left'" },
-            { attr: 'showWordLimit', desc: '是否显示文字统计', type: 'boolean', default: 'false' },
-            { attr: 'clear', desc: '清空事件', type: 'function', default: 'null' },
-            { attr: 'blur', desc: '失去焦点事件', type: 'function', default: 'null' },
-            { attr: 'focus', desc: '获得焦点事件', type: 'function', default: 'null' },
+            { attr: 'v-model:value', desc: 'picker绑定值', type: 'string', default: '""' },
+            { attr: 'v-model:visible', desc: '是否展示picker', type: 'boolean', default: 'false' },
+            { attr: 'columns', desc: 'picker选项', type: "array", default: "[]" },
+            { attr: 'confirm', desc: '选择回调', type: 'function', default: 'null' },
         ]
         return () => (
             <div class='demo-container'>
