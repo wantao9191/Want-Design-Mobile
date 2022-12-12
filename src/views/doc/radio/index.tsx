@@ -1,7 +1,6 @@
 import { defineComponent } from 'vue'
 import demo1 from './demo1?raw'
 type tableArray = { attr?: string, desc?: string, type?: string, default?: string }
-
 export const Radio = defineComponent({
     props: {},
     setup(props, context) {

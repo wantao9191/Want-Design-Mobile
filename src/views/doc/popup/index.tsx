@@ -12,7 +12,7 @@ export const Popup = defineComponent({
         const tableData: Array<tableArray> = [
             { attr: 'v-model:visible', desc: '是否展示popup', type: 'boolean', default: 'false' },
             { attr: 'round', desc: '是否是用圆角样式', type: "'boolean'", default: "false" },
-            { attr: 'position', desc: '打开位置', type: "'string'", default: "'bottom'" },
+            { attr: 'position', desc: '打开位置', type: "'string'", default:"'bottom'" },
         ]
         return () => (
             <div class='demo-container'>
