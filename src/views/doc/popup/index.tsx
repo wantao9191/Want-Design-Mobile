@@ -10,10 +10,9 @@ export const Popup = defineComponent({
             "html"
         )
         const tableData: Array<tableArray> = [
-            { attr: 'v-model:value', desc: 'picker绑定值', type: 'string', default: '""' },
-            { attr: 'v-model:visible', desc: '是否展示picker', type: 'boolean', default: 'false' },
-            { attr: 'columns', desc: 'picker选项', type: "array", default: "[]" },
-            { attr: 'confirm', desc: '选择回调', type: 'function', default: 'null' },
+            { attr: 'v-model:visible', desc: '是否展示popup', type: 'boolean', default: 'false' },
+            { attr: 'round', desc: '是否是用圆角样式', type: "'boolean'", default: "false" },
+            { attr: 'position', desc: '打开位置', type: "'string'", default: "'bottom'" },
         ]
         return () => (
             <div class='demo-container'>

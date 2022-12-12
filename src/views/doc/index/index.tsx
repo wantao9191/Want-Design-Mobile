@@ -19,7 +19,7 @@ export const Doc = defineComponent({
             },
             {
                 label: 'Basic', children: [
-                    { label: '图标 Icon', path: '/doc/icon' },
+                    // { label: '图标 Icon', path: '/doc/icon' },
                     { label: '按钮 Button', path: '/doc/button' },
                 ]
             },
