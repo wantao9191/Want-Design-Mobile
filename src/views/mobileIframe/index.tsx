@@ -20,7 +20,8 @@ export const MobileIframe = defineComponent({
             'popup-demo1': defineAsyncComponent(() => import('../doc/popup/demo1')),
             'toast-demo1': defineAsyncComponent(() => import('../doc/toast/demo1')),
             'swiper-action-demo1': defineAsyncComponent(() => import('../doc/swipeAction/demo1')),
-            'notice-bar-demo1': defineAsyncComponent(() => import('../doc/noticeBar/demo1'))
+            'notice-bar-demo1': defineAsyncComponent(() => import('../doc/noticeBar/demo1')),
+            'collapse-demo1': defineAsyncComponent(() => import('../doc/collapse/demo1'))
         }
         const element = components[route.params.component]
         return () => (
