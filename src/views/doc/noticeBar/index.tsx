@@ -10,9 +10,12 @@ export const NoticeBar = defineComponent({
             "html"
         )
         const tableData: Array<tableArray> = [
-            { attr: 'block', desc: '是否渲染为块级元素', type: "boolean", default: "false" },
-            { attr: 'direction', desc: '间距方向', type: "'vertical' | 'horizontal'", default: "'horizontal'" },
-            { attr: 'justify', desc: '主轴对齐方式	', type: "'flex-start' | 'flex-end' | 'center' | 'space-between' | 'space-around' | 'space-evenly' | 'stretch'", default: "-" },
+            { attr: 'type', desc: '通告栏类型', type: "'default' | 'info' | 'warning' | 'error'", default: "'default'" },
+            { attr: 'closeable', desc: '是否关闭', type: "boolean", default: "false" },
+        ]
+        const tableData1: Array<tableArray> = [
+            { attr: 'default', desc: '通告栏文本', type: "slot", default: "null" },
+            { attr: 'right', desc: '自定义操作栏', type: "slot", default: "null" },
         ]
         return () => (
             <div class='demo-container'>
@@ -26,6 +29,21 @@ export const NoticeBar = defineComponent({
                 <m-demo html={D1} params='notice-bar-demo1'></m-demo>
                 <h3>属性</h3>
                 <m-table data={tableData}>
+                    <table-item label='属性' prop='attr'></table-item>
+                    <table-item label='说明' prop='desc'></table-item>
+                    <table-item label='类型' v-slots={{
+                        row: (scope: any) => {
+                            return <code>{scope.row.type}</code>
+                        }
+                    }}></table-item>
+                    <table-item label='默认值' v-slots={{
+                        row: (scope: any) => {
+                            return <code>{scope.row.default}</code>
+                        }
+                    }}></table-item>
+                </m-table>
+                <h3>Slots</h3>
+                <m-table data={tableData1}>
                     <table-item label='属性' prop='attr'></table-item>
                     <table-item label='说明' prop='desc'></table-item>
                     <table-item label='类型' v-slots={{
